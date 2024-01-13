@@ -27,7 +27,6 @@ def create_app(db_url=None):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.init_app(app) 
     api = Api(app)
-    #app.config["JWT_SECRET_KEY"] = "95862786094382612999428958202923027102"
     migrate = Migrate(app, db)
     jwt = JWTManager(app)
 
